@@ -8,11 +8,19 @@ public class RepositorioConsultoras implements WithGlobalEntityManager {
 
   public static RepositorioConsultoras instancia = new RepositorioConsultoras();
 
-  public List<Consultora> listar() {
-    return entityManager()//
-        .createQuery("from Consultora", Consultora.class) //
+  public List<Consultora> listarN(int n) {
+    return entityManager()
+        .createQuery("from Consultora", Consultora.class)
+        .setMaxResults(n)
         .getResultList();
   }
+
+  public List<Consultora> listar() {
+    return entityManager()
+            .createQuery("from Consultora", Consultora.class)
+            .getResultList();
+  }
+
 
   public Consultora buscar(long id) {
     return entityManager().find(Consultora.class, id);

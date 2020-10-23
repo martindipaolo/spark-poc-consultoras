@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Comparator;
+import java.util.stream.Collectors;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -50,6 +52,10 @@ public class Consultora {
 
   public Collection<Proyecto> getProyectos() {
     return proyectos;
+  }
+
+  public Collection<Proyecto> ultimosNProyectos(int n) {
+    return this.getProyectos().stream().sorted(Comparator.comparingLong(Proyecto::getId).reversed()).limit(n).collect(Collectors.toList());
   }
 
   public long getId() {

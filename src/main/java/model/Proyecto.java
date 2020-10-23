@@ -30,7 +30,11 @@ public class Proyecto {
 
   protected Proyecto() {
   }
-  
+
+  public long getId() {
+    return id;
+  }
+
   public Proyecto(String nombre, BigDecimal costoEstimado) {
     this.nombre = nombre;
     this.costoEstimado = costoEstimado;

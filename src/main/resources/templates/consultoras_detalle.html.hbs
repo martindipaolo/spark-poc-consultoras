@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+</head>
+
+<body>
+<nav>
+</nav>
+<main>
+    <h1>Consultorea.me</h1>
+
+    <section>
+        <h2>{{consultora.nombre}}</h2>
+
+        <p>Cantidad de empleados: {{consultora.cantidadEmpleados}}</p>
+        <p>Últimos tres proyectos:</p>
+        <ul>
+            {{#proyectos}}
+            <li>{{nombre}}</li>
+            {{/proyectos}}
+        </ul>
+
+
+
+    </section>
+</main>
+<footer>
+    Copyright {{anio}} Consultorea.me
+</footer>
+</body>
+
+</html>

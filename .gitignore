@@ -2,3 +2,7 @@
 .classpath
 .settings
 target
+.idea
+app-db.log
+app-db.properties
+app-db.script
