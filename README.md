@@ -1,4 +1,4 @@
-# Próximos pasos
+# Se agregó:
 
 1. En la página principal (`/`) se están mostrando todas las consultoras. En su lugar, mostrar las primeras 3.
 1. Crear una página en la que se listen todas las consultoras (`/consultoras`), ordenadas según la cantidad de empleades, y agregar un enlace (`<a>`) desde la página principal (`/`) hasta este listado.
